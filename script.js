@@ -39,6 +39,15 @@ function verificarTentativa() {
     document.getElementById("tentativa").value = "";
 }
 
+const inputElement = document.getElementById("tentativa");
+
+inputElement.addEventListener("keyup", function(event) {
+    if (event.key === "Enter") {
+    console.log("Tecla Enter pressionada!");
+
+    }
+});
+
 function exibirResultado(mensagem) {
     document.getElementById("resultado").innerText = mensagem;
 }
@@ -49,3 +58,4 @@ function exibirHistorico(tentativa) {
     historicoItem.innerText = `- ${tentativa}`;
     historicoDiv.appendChild(historicoItem);
 }
+
